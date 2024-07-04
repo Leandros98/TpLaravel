@@ -5,12 +5,11 @@ $name ??= '';
 $value ??= '';
 $label ??= ucfirst($name);
 @endphp
-<div @class([ "form-group" , $class])>
-<label for="{{$name}}" class="form-control">{{$label}}</label>
+<div @class([ "" , $class])>
 @if($type==='textarea') 
- <textarea class="form-control @error($name) is-invalid @enderror" type="{{$type}}" id="{{$name}}" name="{{$name}}">{{old($name, $value)}} </textarea>
+ <textarea class="block mt-1 w-full @error($name) is-invalid @enderror" type="{{$type}}" id="{{$name}}" name="{{$name}}">{{old($name, $value)}} </textarea>
 @else
-  <input  class="form-control @error($name) is-invalid @enderror" type="{{$type}}" id="{{$name}}" name="{{$name}}" value="{{old($name, $value)}}">
+  <input class="block mt-1 w-full @error($name) is-invalid @enderror" type="{{$type}}" id="{{$name}}" name="{{$name}}" value="{{old($name, $value)}}">
 @endif
 @error($name) 
     <div class="invalid-feedback">
@@ -18,3 +17,4 @@ $label ??= ucfirst($name);
        </div>
 @enderror
 </div>
+
