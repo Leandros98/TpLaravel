@@ -27,7 +27,9 @@
         
         <!-- Description -->
         <x-input-label for="description" :value="__('Description')" />
-        <x-textarea id="description" class="block mt-1 w-full" name="description" :value="$property->description" />
+       <!-- Description -->
+<x-input-label for="description" :value="__('Description')" />
+<x-textarea id="description" class="block mt-1 w-full" name="description" @value="$property->description" />
         <x-input-error :messages="$errors->get('description')" class="mt-2" />
         
         <!-- Détails -->
