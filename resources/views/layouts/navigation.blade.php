@@ -9,18 +9,24 @@
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
+                   <!-- Navigation Links -->
+           <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
+                     {{ __('Home') }}
+                </x-nav-link>
+            </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.property.index')"  :active="request()->routeIs('dashboard')">
-                        {{ __('Gerer les proprietes') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.option.index')" :active="request()->routeIs('dashboard')">
-                         {{ __('Gerer les options') }}
-                    </x-nav-link>
-                </div>
+           <!-- Navigation Links -->
+           <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('admin.property.index')" :active="request()->routeIs('admin.property.index')">
+                     {{ __('Gérer les propriétés') }}
+                </x-nav-link>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                 <x-nav-link :href="route('admin.option.index')" :active="request()->routeIs('admin.option.index')">
+                        {{ __('Gérer les options') }}
+                 </x-nav-link>
+            </div>
             </div>
 
             <!-- Settings Dropdown -->
