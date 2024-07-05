@@ -1,13 +1,7 @@
 <x-app-layout>
-     @php 
-        $route=request()->route()->getName();
-     @endphp
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
-        </h2>
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        <li><a  href="{{route('admin.property.index')}}" @class(['nav-link','active'=>str_contains($route,'property.')])>Gerer les proprietes</a></li>
         </h2>
     </x-slot>
 
